@@ -1,0 +1,9 @@
+{
+  "name": "tsmodernbackend",
+  "version": "0.0.0",
+  "description": "tsmodernbackend",
+  "main": "app.js",
+  "author": {
+    "name": "a.tretyakov"
+  }
+}
