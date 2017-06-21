@@ -12,7 +12,6 @@ export class InMemoryContainer implements Iioc {
 		var suitable = this.components.filter(x => {
 			if (name && x.name != name) return false;
 			var t = new x.type();
-			var z: string = "";
 			return t.instanceOf(type);
 		});
 
@@ -24,27 +23,6 @@ export class InMemoryContainer implements Iioc {
 	}	
 
 	register(component: RegisteredComponent) {
-		this.checkExistance(component);
 		this.components.push(component);
-	}
-
-	private checkExistance(component: RegisteredComponent) {
-		let checker = this.existanceChecker(component);
-
-		if (this.components.filter(checker).length != 0) {
-			throw new Error('Component already registered!');
-		}
-	}
-
-	private existanceChecker(component: RegisteredComponent) {
-		return (com: RegisteredComponent) => {
-			var existed =
-				com.type == component.type
-				&& com.realizer == component.realizer;
-
-			if (existed && component.name && com.name) {
-				return component.name == com.name;
-			}
-		};
 	}
 }
