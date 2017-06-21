@@ -16,6 +16,10 @@ export module app {
 	}
 
 	class SimpleMessegner implements Messenger {
+		constructor(container: InMemoryContainer) {
+			console.log(container != null);
+		}
+
 		message(): string {
 			return 'Method message is not implemented.';
 		}

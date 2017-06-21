@@ -50,6 +50,11 @@
     <TypeScriptCompile Include="app.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="di\impl\SimpleInjector.ts" />
+    <TypeScriptCompile Include="di\struct\InjectionType.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="di\interfaces\IDependencyInjector.ts" />
     <TypeScriptCompile Include="extensions\object\Object.d.ts" />
     <TypeScriptCompile Include="extensions\object\Object.ts" />
     <TypeScriptCompile Include="ioc\impl\InMemoryContainer.ts" />
@@ -71,6 +76,10 @@
     </TypeScriptCompile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="di\" />
+    <Folder Include="di\impl\" />
+    <Folder Include="di\interfaces\" />
+    <Folder Include="di\struct\" />
     <Folder Include="extensions\" />
     <Folder Include="extensions\object\" />
     <Folder Include="ioc\" />
